@@ -13,9 +13,9 @@ public:
   {
         numToFind = target - nums[i];
         //NOW SEARCH IF numToFind is in the map
-        if((mymap.find(numToFind) != mymap.end()) && (i != mymap[numToFind])) 
+        if((mymap.find(numToFind) != mymap.end()) && (i != mymap[numToFind]))  // Ensures that the same index isn't summed up. 
         {
-            //it is found
+            //It is found
             result.push_back(i);
             result.push_back(mymap[numToFind]);
             return result;    
