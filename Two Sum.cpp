@@ -3,10 +3,10 @@ public:
     vector<int> twoSum(vector<int> &nums, int target)
  {
   //Key is the number and value is its index in the vector.
-	unordered_map<int, int> mymap;
-	vector<int> result;
+  unordered_map<int, int> mymap;
+  vector<int> result;
   int numToFind;    
-	for (int i = 0; i < nums.size(); i++) // Adding the key and value to the map
+  for (int i = 0; i < nums.size(); i++) // Adding the key and value to the map
         mymap[nums[i]] = i;
 
   for (int i = 0; i < nums.size(); i++)
