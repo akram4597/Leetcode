@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int numSquare(int n)
+    {
+        int squareSum = 0;
+        while(n){
+         squareSum += (n % 10) * (n % 10);
+         n = n/10;
+        }    
+        return squareSum;    
+    }
+    bool isHappy(int n) {
+        set <int> myset;
+        int val = n;
+        myset.insert(n);
+        while(true)
+        {
+            val = numSquare(val);
+            if(val == 1)
+                return true;
+            else if(myset.find(val) != myset.end()) // if its found in the set
+                return false;
+            
+            myset.insert(val);  // if it isn't already in the set, then we insert it.
+        }        
+    }
+};
